@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import './Login.scss'
 import { authService, firebaseInstance } from 'fbase'
 
@@ -7,10 +6,6 @@ import logo from '../assets/images/logo.svg'
 import google from '../assets/images/google.svg'
 
 export default class Login extends Component {
-  static propTypes = {
-    prop: PropTypes
-  }
-
   onSocialClick = async (event) => {
     const { name } = event.target
     let provider = null

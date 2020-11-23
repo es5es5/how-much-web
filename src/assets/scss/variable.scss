@@ -10,3 +10,10 @@ $disabled: #737373;
 $border: #E2E4EE;
 
 $title: #17233d;
+
+@mixin background() {
+  min-height: 100vh;
+  max-width: 100%;
+  background: rgb(247,153,153);
+  background: linear-gradient(180deg, rgba(247,153,153,1) 0%, rgba(254,229,176,1) 100%);
+}
