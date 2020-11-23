@@ -1,0 +1,52 @@
+#login {
+  min-height: 100vh;
+  max-width: 100%;
+  background: rgb(247,153,153);
+  background: linear-gradient(180deg, rgba(247,153,153,1) 0%, rgba(254,229,176,1) 100%);
+}
+
+.logo_wrap {
+  text-align: center;
+  padding-top: 10rem;
+}
+.logo {
+  display: inline-block;
+  width: 80%;
+}
+
+.social_wrap {
+  padding: 0 1rem;
+
+  .btn-social {
+    position: relative;
+    width: 100%;
+    border: 1px solid transparent;
+    padding: 1rem 0 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+    line-height: 1.25rem;
+
+    &.google {
+      background-color: #fff;
+      color: gray;
+      line-height: 1.5rem;
+      border: 2px solid gray;
+    }
+
+    &.anonymous {
+      background-color: #fff;
+      color: gray;
+      line-height: 1.5rem;
+      border: 2px solid gray;
+    }
+  }
+
+  .social-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 1.5rem;
+    vertical-align: top;
+  }
+}

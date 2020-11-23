@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './Home.scss'
-
-import Logo from '../assets/images/logo.svg'
-
 export default class Home extends Component {
   static propTypes = {
     prop: PropTypes
@@ -12,9 +9,7 @@ export default class Home extends Component {
   render() {
     return (
       <div id="home">
-        <div className="logo_wrap">
-          <img src={Logo} alt="logo" className="logo" />
-        </div>
+        HOME
       </div>
     )
   }
