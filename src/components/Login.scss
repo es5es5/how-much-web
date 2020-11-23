@@ -1,3 +1,6 @@
+
+@import 'assets/scss/variable.scss';
+
 #login {
   min-height: 100vh;
   max-width: 100%;
@@ -9,12 +12,14 @@
   text-align: center;
   padding-top: 10rem;
 }
+
 .logo {
   display: inline-block;
   width: 80%;
 }
 
 .social_wrap {
+  margin-top: 16rem;
   padding: 0 1rem;
 
   .btn-social {
@@ -29,16 +34,16 @@
 
     &.google {
       background-color: #fff;
-      color: gray;
+      color: $gray;
       line-height: 1.5rem;
-      border: 2px solid gray;
+      border: 2px solid $gray;
     }
 
     &.anonymous {
       background-color: #fff;
-      color: gray;
+      color: $gray;
       line-height: 1.5rem;
-      border: 2px solid gray;
+      border: 2px solid $gray;
     }
   }
 
