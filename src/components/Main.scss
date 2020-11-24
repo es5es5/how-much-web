@@ -1,24 +1,9 @@
 @import 'assets/scss/variable.scss';
 
-@mixin card($padding: 1.5rem, $marginBottom: 1rem) {
-  text-align: center;
-  margin-bottom: $marginBottom;
-  padding: $padding;
-  background-color: #fff;
-  border-radius: .5rem;
-
-  -webkit-box-shadow: 1px 4px 8px 0px rgba(#000, .3);
-  -moz-box-shadow:    1px 4px 8px 0px rgba(#000, .3);
-  box-shadow:         1px 4px 8px 0px rgba(#000, .3);
-}
 
 #main {
   @include background;
-  padding: 4rem 2rem 2rem 2rem;
-
-  section {
-    margin-bottom: 1rem;
-  }
+  padding-top: 4rem;
 }
 
 .info_wrap {
@@ -49,11 +34,12 @@
 
     text-align: left;
 
-    &._1 { color: $red; }
-    &._2 { color: $primary; }
+    &._1 { font-weight: bold; color: $red; }
+    &._2 { font-weight: bold; color: $primary; }
 
     .rank {
-      margin-right: 1rem;
+      display: inline-block;
+      width: 2rem;
     }
 
     .userName {

@@ -2,10 +2,7 @@
 @import 'assets/scss/variable.scss';
 
 #login {
-  min-height: 100vh;
-  max-width: 100%;
-  background: rgb(247,153,153);
-  background: linear-gradient(180deg, rgba(247,153,153,1) 0%, rgba(254,229,176,1) 100%);
+  @include background;
 }
 
 .logo_wrap {
@@ -15,14 +12,13 @@
 
 .logo {
   display: inline-block;
-  width: 80%;
 }
 
 .social_wrap {
   margin-top: 16rem;
-  padding: 0 1rem;
 
   .btn-social {
+    @include card;
     position: relative;
     width: 100%;
     border: 1px solid transparent;
@@ -36,14 +32,12 @@
       background-color: #fff;
       color: $gray;
       line-height: 1.5rem;
-      border: 2px solid $gray;
     }
 
     &.anonymous {
       background-color: #fff;
       color: $gray;
       line-height: 1.5rem;
-      border: 2px solid $gray;
     }
   }
 

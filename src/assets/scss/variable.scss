@@ -13,8 +13,21 @@ $border: #E2E4EE;
 $title: #17233d;
 
 @mixin background() {
+  padding: 2rem;
   min-height: 100vh;
   max-width: 100%;
   background: #f79999;
   background: linear-gradient(180deg, #f79999 0%, #fee5b0 100%);
+}
+
+@mixin card($padding: 1.5rem, $marginBottom: 1rem) {
+  text-align: center;
+  margin-bottom: $marginBottom;
+  padding: $padding;
+  background-color: #fff;
+  border-radius: .5rem;
+
+  -webkit-box-shadow: 1px 4px 8px 0px rgba(#000, .3);
+  -moz-box-shadow:    1px 4px 8px 0px rgba(#000, .3);
+  box-shadow:         1px 4px 8px 0px rgba(#000, .3);
 }
