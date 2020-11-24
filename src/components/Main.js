@@ -18,12 +18,15 @@ export default class Main extends Component {
   render() {
     return (
       <div id="main">
-        <Odometer
-          value={this.state.odometerValue}
-          duration={600}
-          format="ddd,ddd,ddd"
-          auto={true}
-        />
+        <div className="count_wrap">
+          <span className="won">￦</span>
+          <Odometer
+            value={this.state.odometerValue}
+            duration={1000}
+            format="ddd,ddd,ddd"
+            auto={true}
+          />
+        </div>
       </div>
     )
   }
