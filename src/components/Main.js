@@ -37,7 +37,67 @@ export default class Main extends Component {
             <li className="rank-item">
               <span className="number">1</span>
               <span className="userName">김루이</span>
-              <span className="pay">24,000</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
+            </li>
+            <li className="rank-item">
+              <span className="number">1</span>
+              <span className="userName">김루이</span>
+              <span className="pay"><span className="won">￦</span>24,000</span>
             </li>
           </ul>
         </section>

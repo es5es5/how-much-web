@@ -1,23 +1,29 @@
 @import 'assets/scss/variable.scss';
 
+@mixin card($padding: 1.5rem, $marginBottom: 1rem) {
+  text-align: center;
+  margin-bottom: $marginBottom;
+  padding: $padding;
+  background-color: #fff;
+  border-radius: .5rem;
+
+  -webkit-box-shadow: 1px 4px 8px 0px rgba(#000, .3);
+  -moz-box-shadow:    1px 4px 8px 0px rgba(#000, .3);
+  box-shadow:         1px 4px 8px 0px rgba(#000, .3);
+}
+
 #main {
   @include background;
   padding: 4rem 2rem 2rem 2rem;
 
   section {
-    text-align: center;
     margin-bottom: 1rem;
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: .5rem;
-
-    -webkit-box-shadow: 1px 4px 8px 0px rgba(#000, .3);
-    -moz-box-shadow:    1px 4px 8px 0px rgba(#000, .3);
-    box-shadow:         1px 4px 8px 0px rgba(#000, .3);
   }
 }
 
 .info_wrap {
+  @include card;
+
   .chatter {
     margin-bottom: .5rem;
   }
@@ -34,8 +40,12 @@
 }
 
 .rank_wrap {
+  max-height: calc(100vh - 20rem);
+  overflow-y: scroll;
+
   .rank-item {
     @include clearfix;
+    @include card(1rem, 1rem);
 
     text-align: left;
 
@@ -49,6 +59,12 @@
 
     .pay {
       float: right;
+
+      .won {
+        margin-right: .25rem;
+        color: $gray;
+        font-size: .8rem;
+      }
     }
   }
 }
