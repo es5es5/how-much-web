@@ -1,19 +1,59 @@
 @import 'assets/scss/variable.scss';
 
 #main {
+  @include background;
+  padding: 4rem 2rem 2rem 2rem;
+
+  section {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+
+    -webkit-box-shadow: 1px 4px 8px 0px rgba(#000, .3);
+    -moz-box-shadow:    1px 4px 8px 0px rgba(#000, .3);
+    box-shadow:         1px 4px 8px 0px rgba(#000, .3);
+  }
 }
 
-.logo_wrap {
-  text-align: center;
-  padding-top: 10rem;
-}
-.logo {
-  display: inline-block;
-  width: 80%;
+.info_wrap {
+  .chatter {
+    margin-bottom: .5rem;
+  }
+
+  .myRank {
+    margin-top: .75rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    .number {
+      color: $primary;
+    }
+  }
 }
 
-.count_wrap {
-  text-align: center;
+.rank_wrap {
+  .rank-item {
+    @include clearfix;
+
+    text-align: left;
+
+    .number {
+      margin-right: 1rem;
+    }
+
+    .userName {
+      font-weight: bold;
+    }
+
+    .pay {
+      float: right;
+    }
+  }
+}
+
+.odometer_wrap {
   .odometer.odometer-auto-theme, .odometer.odometer-theme-default {
     font-size: 3rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -23,10 +63,11 @@
 
   .won {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 3rem;
     vertical-align: middle;
     margin-right: .25rem;
+    color: $primary;
   }
 
   .odometer.odometer-auto-theme, .odometer.odometer-theme-default {

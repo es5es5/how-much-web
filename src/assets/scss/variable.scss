@@ -1,6 +1,7 @@
 @import 'colony-vue/src/assets/scss/variable.scss';
 
-$primary: #42b983;
+$primary: #f79999;
+$secondary: #fee5b0;
 $success: #2d8cf0;
 $warning: #ff9900;
 $error: #ed3f14;
@@ -14,6 +15,6 @@ $title: #17233d;
 @mixin background() {
   min-height: 100vh;
   max-width: 100%;
-  background: rgb(247,153,153);
-  background: linear-gradient(180deg, rgba(247,153,153,1) 0%, rgba(254,229,176,1) 100%);
+  background: #f79999;
+  background: linear-gradient(180deg, #f79999 0%, #fee5b0 100%);
 }
