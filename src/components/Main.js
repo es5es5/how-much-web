@@ -6,7 +6,69 @@ import './Main.scss'
 
 export default class Main extends Component {
   state = {
-    odometerValue: 0
+    odometerValue: 0,
+    rankList: [
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '24,000'
+      },
+      {
+        rank: 1,
+        userName: '박보검',
+        pay: '24,000'
+      },
+      {
+        rank: 1,
+        userName: '홍길이',
+        pay: '24,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+      {
+        rank: 1,
+        userName: '김루이',
+        pay: '11,000'
+      },
+    ]
   }
 
   componentDidMount() {
@@ -34,71 +96,13 @@ export default class Main extends Component {
 
         <section className="rank_wrap">
           <ul className="rank">
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
+            {this.state.rankList.map((rank, index) => (
+            <li className={`rank-item _${index + 1}`} key={index}>
+              <span className={`rank`}>{index + 1}</span>
+              <span className="userName">{rank.userName}</span>
+              <span className="pay"><span className="won">￦</span>{rank.pay}</span>
             </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
-            <li className="rank-item">
-              <span className="number">1</span>
-              <span className="userName">김루이</span>
-              <span className="pay"><span className="won">￦</span>24,000</span>
-            </li>
+            ))}
           </ul>
         </section>
       </div>

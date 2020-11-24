@@ -49,7 +49,10 @@
 
     text-align: left;
 
-    .number {
+    &._1 { color: $red; }
+    &._2 { color: $primary; }
+
+    .rank {
       margin-right: 1rem;
     }
 
