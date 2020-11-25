@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
 import Login from './components/Login'
 import Main from './components/Main'
+import Preview from './components/Preview'
 
 import './App.scss'
 
@@ -16,6 +17,7 @@ function App() {
       </Route>
       <Route path="/login" component={Login} />
       <Route path="/main" component={Main} />
+      <Route path="/preview" component={Preview} />
     </BrowserRouter>
   )
 }
