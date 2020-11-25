@@ -6,7 +6,7 @@ function Preview() {
   return (
     <div id="preview">
       <div className="iframe_wrap">
-        <iframe src="http://localhost:3000/login" title="preview" frameborder="0" width="375" height="812" />
+        <iframe src="https://how-much.netlify.app/login" title="preview" frameborder="0" width="375" height="812" />
       </div>
     </div>
   )
