@@ -3,10 +3,12 @@ import React, { Component } from 'react'
 import Odometer from 'react-odometerjs';
 
 import './Main.scss'
-
+import { Top, Middle, Bottom } from 'data/chatter'
 export default class Main extends Component {
   state = {
+    chatter: '',
     odometerValue: 0,
+    myRank: Math.floor(Math.random() * 3) + 1,
     rankList: [
       {
         rank: 1,
@@ -71,9 +73,23 @@ export default class Main extends Component {
     ]
   }
 
+  setChatter () {
+    switch (this.state.myRank) {
+      case 1:
+        return Top[Math.floor(Math.random() * Top.length)]
+      case 2:
+        return Middle[Math.floor(Math.random() * Top.length)]
+      case 3:
+        return Bottom[Math.floor(Math.random() * Top.length)]
+      default:
+        return '배고파'
+    }
+  }
+
   componentDidMount() {
     this.setState({
-      odometerValue: 142000
+      odometerValue: 142000,
+      chatter: this.setChatter()
     })
   }
 
@@ -81,7 +97,7 @@ export default class Main extends Component {
     return (
       <div id="main">
         <section className="info_wrap">
-          <p className="chatter">내가 이만큼이나 먹었다고?</p>
+          <p className="chatter">{this.state.chatter}</p>
           <div className="odometer_wrap">
             <span className="won">￦</span>
             <Odometer
@@ -91,7 +107,7 @@ export default class Main extends Component {
               auto={true}
             />
           </div>
-          <p className="myRank">현재 랭킹 <span className="number">1위</span></p>
+        <p className="myRank">현재 랭킹 <span className="number">{this.state.myRank}위</span></p>
         </section>
 
         <section className="rank_wrap">
