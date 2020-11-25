@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { authService, firebaseInstance } from 'fbase'
-import { browserHistory } from 'react-router'
 
 import './Login.scss'
 
