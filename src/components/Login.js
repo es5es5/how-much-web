@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import './Login.scss'
 import { authService, firebaseInstance } from 'fbase'
+import { browserHistory } from 'react-router'
+
+import './Login.scss'
 
 import logo from '../assets/images/logo.svg'
 import google from '../assets/images/google.svg'
@@ -11,7 +13,8 @@ export default class Login extends Component {
     let provider = null
     switch (name) {
       case 'google':
-        provider = new firebaseInstance.auth.GoogleAuthProvider()
+        document.location.href = '/main'
+        // provider = new firebaseInstance.auth.GoogleAuthProvider()
         break
       case 'github':
         provider = new firebaseInstance.auth.GithubAuthProvider()
@@ -19,8 +22,7 @@ export default class Login extends Component {
       default:
         break
     }
-    const data = await authService.signInWithPopup(provider)
-    console.log(data)
+    await authService.signInWithPopup(provider)
   }
 
   render() {
