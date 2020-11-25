@@ -1,34 +1,26 @@
-// import React from 'react';
-// import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-// import Auth from '../routes/Auth';
-// import Home from '../routes/Home';
+import React from 'react'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
+import AppRouter from './Router'
+import Home from './components/Home'
+import Login from './components/Login'
+import Main from './components/Main'
+import Preview from './components/Preview'
 
-// const AppRouter = ({isLoggedIn}) => {
-//   // eslint-disable-next-line
-//   return (
-//     <Router>
-//       <Switch>
-//         {
-//         isLoggedIn ?
-//         (
-//           <>
-//             <Route exact path="/">
-//               <Home></Home>
-//             </Route>
-//           </>
-//         )
-//         :
-//         (
-//           <>
-//             <Route exact path="/">
-//               <Auth></Auth>
-//             </Route>
-//           </>
-//         )
-//         }
-//       </Switch>
-//     </Router>
-//   )
-// }
+import './App.scss'
 
-// export default AppRouter
+function Router() {
+  return (
+    <BrowserRouter>
+      <Route path="/" exact={true} component={Home}>
+        <Redirect to={{
+          pathname: '/login'
+        }} />
+      </Route>
+      <Route path="/login" component={Login} />
+      <Route path="/main" component={Main} />
+      <Route path="/preview" component={Preview} />
+    </BrowserRouter>
+  )
+}
+
+export default Router
