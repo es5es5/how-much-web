@@ -3,7 +3,7 @@ import { authService, firebaseInstance } from 'fbase'
 
 import './Login.scss'
 
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/logo.png'
 import google from '../assets/images/google.svg'
 
 export default class Login extends Component {
