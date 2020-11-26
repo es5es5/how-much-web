@@ -25,7 +25,7 @@
 }
 
 .rank_wrap {
-  max-height: calc(100vh - 20rem);
+  max-height: calc(100vh - 24rem);
   overflow-y: scroll;
 
   .rank-item {
@@ -52,6 +52,10 @@
       }
     }
   }
+}
+
+.action_wrap {
+  margin-top: 1rem;
 }
 
 .odometer_wrap {

@@ -1,5 +1,8 @@
 @charset 'utf-8';
 
+@import './assets/scss/button.scss';
+@import './assets/scss/variable.scss';
+
 /* reset */
 *, *::after, *::before { box-sizing: border-box; }
 
@@ -45,8 +48,4 @@ a {
 b, strong, em {
 	font-style: normal;
 	font-weight: normal;
-}
-
-button {
-	cursor: pointer;
 }

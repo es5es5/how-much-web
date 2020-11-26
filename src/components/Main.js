@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import Odometer from 'react-odometerjs';
 
 import './Main.scss'
@@ -120,6 +122,12 @@ export default class Main extends Component {
             </li>
             ))}
           </ul>
+        </section>
+
+        <section className="action_wrap">
+          <Link to="/create">
+            <button type="button" className="btn primary fill">장부 입력</button>
+          </Link>
         </section>
       </div>
     )

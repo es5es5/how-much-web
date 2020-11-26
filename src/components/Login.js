@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { authService, firebaseInstance } from 'fbase'
+import { Link } from 'react-router-dom'
 
 import './Login.scss'
 
@@ -12,8 +13,7 @@ export default class Login extends Component {
     let provider = null
     switch (name) {
       case 'google':
-        document.location.href = '/main'
-        // provider = new firebaseInstance.auth.GoogleAuthProvider()
+        provider = new firebaseInstance.auth.GoogleAuthProvider()
         break
       case 'github':
         provider = new firebaseInstance.auth.GithubAuthProvider()
@@ -32,10 +32,12 @@ export default class Login extends Component {
         </div>
         <div className="sign_wrap">
           <div className="social_wrap">
-            <button type="button" className="btn-social google" name="google" onClick={this.onSocialClick}>
-              <img src={google} alt="google" className="social-logo" />
-              구글 계정으로 로그인
-            </button>
+            <Link to="/main">
+              <button type="button" className="btn-social google" name="google">
+                <img src={google} alt="google" className="social-logo" />
+                구글 계정으로 로그인
+              </button>
+            </Link>
             {/* <button type="button" className="btn-social anonymous" onClick={signInAnonymously}>
               <img src="@/assets/images/woman.svg" alt="anonymous" className="social-logo" />
               게스트 계정으로 로그인
