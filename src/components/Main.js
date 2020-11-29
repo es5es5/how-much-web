@@ -100,7 +100,7 @@ export default class Main extends Component {
       <div id="main">
         <section className="info_wrap">
           <p className="chatter">{this.state.chatter}</p>
-          <div className="odometer_wrap">
+          <disv className="odometer_wrap">
             <span className="won">￦</span>
             <Odometer
               value={this.state.odometerValue}
@@ -108,7 +108,7 @@ export default class Main extends Component {
               format="ddd,ddd,ddd"
               auto={true}
             />
-          </div>
+          </disv>
         <p className="myRank">현재 랭킹 <span className="number">{this.state.myRank}위</span></p>
         </section>
 
