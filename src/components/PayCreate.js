@@ -1,29 +1,36 @@
 import React, { Component } from 'react'
 
-import Odometer from 'react-odometerjs';
-
 import './PayCreate.scss'
 
 export class PayCreate extends Component {
   state = {
-    odometerValue: 0,
+    pay: ''
   }
   componentDidMount() {
-    this.setState({
-      odometerValue: 23131,
-    })
+  }
+  onChange = event => {
+    const { name, value } = event.target
+
+    switch (name) {
+      case 'pay':
+        this.setState({
+          pay: value
+        })
+        break
+      default:
+        break
+    }
   }
   render() {
     return (
       <div id="payCreate">
-        <div className="odometer_wrap">
-          <span className="won">￦</span>
-          <Odometer
-            value={this.state.odometerValue}
-            duration={100}
-            format="ddd,ddd,ddd"
-            auto={true}
-          />
+        <div className="title_wrap">
+          <h2>얼마에요?</h2>
+        </div>
+        <div className="form_wrap">
+          <form onSubmit={() => {}}>
+            <input type="text" value={this.state.pay} name="pay" onChange={this.onChange} className="payInput" />
+          </form>
         </div>
       </div>
     )
