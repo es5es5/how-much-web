@@ -1,7 +1,6 @@
 @import 'assets/scss/variable.scss';
 
-#payCreate {
-}
+#payCreate {}
 
 .title_wrap {
   padding: 1rem;
@@ -31,7 +30,8 @@
       font-size: 1.1rem;
     }
 
-    input, select {
+    input,
+    select {
       border: 1px solid #444;
       outline: none;
       border-radius: .25rem;
@@ -40,7 +40,8 @@
       font-size: 1.5rem;
     }
 
-    input[type="radio"], input[type="checkbox"] {
+    input[type="radio"],
+    input[type="checkbox"] {
       vertical-align: middle;
       display: inline-block;
       width: 1.5rem;
