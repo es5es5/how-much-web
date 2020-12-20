@@ -15,10 +15,45 @@
 
 .form_wrap {
   padding: 1rem;
-  text-align: center;
 
-  .payInput {
-    padding: .5rem 1rem;
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .row {
+    margin-bottom: 1rem;
+
+    label {
+      display: inline-block;
+      margin: .5rem 0;
+      font-size: 1.1rem;
+    }
+
+    input, select {
+      border: 1px solid #444;
+      outline: none;
+      border-radius: .25rem;
+      width: 100%;
+      padding: .5rem 1rem;
+      font-size: 1.5rem;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      vertical-align: middle;
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.check_wrap {
+  label.checkLabel {
+    margin-left: .5rem;
+    margin-right: 1rem;
+    vertical-align: middle;
     font-size: 1.5rem;
   }
 }
