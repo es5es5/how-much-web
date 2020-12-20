@@ -1,12 +1,16 @@
-import React from 'react'
-import AppRouter from './Router'
+import React from "react";
+import AppRouter from "./Router";
 
-import './App.scss'
+import "./App.scss";
+import { CssBaseline } from "@material-ui/core";
 
 function App() {
   return (
-    <AppRouter />
-  )
+    <React.Fragment>
+      <CssBaseline />
+      <AppRouter />
+    </React.Fragment>
+  );
 }
 
-export default App
+export default App;

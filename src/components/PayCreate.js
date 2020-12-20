@@ -1,3 +1,15 @@
+import {
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Input,
+  InputAdornment,
+  InputLabel,
+  MenuItem,
+  Radio,
+  RadioGroup,
+  Select,
+} from "@material-ui/core";
 import React, { Component } from "react";
 
 import "./PayCreate.scss";
@@ -33,60 +45,61 @@ export class PayCreate extends Component {
     return (
       <div id="payCreate">
         <div className="form_wrap">
-          <form onSubmit={() => {}}>
-            <fieldset>
-              <div className="row">
-                <label htmlFor="pay">얼마에요?</label>
-                <input
-                  id="pay"
-                  type="number"
-                  value={this.state.pay}
-                  name="pay"
-                  onChange={this.onChange}
-                />
-              </div>
+          <FormControl fullWidth style={{ marginBottom: "1rem" }}>
+            <InputLabel htmlFor="pay">얼마에요?</InputLabel>
+            <Input
+              id="pay"
+              type="number"
+              style={{ fontSize: "1.5rem" }}
+              value={this.state.pay}
+              name="pay"
+              onChange={this.onChange}
+              startAdornment={
+                <InputAdornment position="start">￦</InputAdornment>
+              }
+            />
+          </FormControl>
 
-              <div className="row">
-                <label htmlFor="payer">누가냄?</label>
-                <select
-                  name="payer"
-                  id="payer"
-                  value={this.state.payer}
-                  onChange={this.onChange}
-                >
-                  <option value="김루이">김루이</option>
-                  <option value="일승이">일승이</option>
-                </select>
-              </div>
+          <FormControl component="fieldset" fullWidth>
+            <FormLabel id="누가냄" component="legend">
+              누가냄?
+            </FormLabel>
+            <Select
+              style={{ fontSize: "1.5rem" }}
+              labelId="누가냄"
+              name="payer"
+              id="demo-simple-select"
+              value={this.state.payer}
+              onChange={this.onChange}
+            >
+              <MenuItem value="김루이">김루이</MenuItem>
+              <MenuItem value="일승이">일승이</MenuItem>
+            </Select>
+          </FormControl>
 
-              <div className="row">
-                <label htmlFor="payType">어케냄?</label>
-                <div className="check_wrap" onChange={this.onChange}>
-                  <input
-                    type="radio"
-                    id="payTypeN빵"
-                    name="payType"
-                    value="N빵"
-                    defaultChecked={this.state.payType === "N빵"}
-                  />
-                  <label htmlFor="payTypeN빵" className="checkLabel">
-                    N빵
-                  </label>
-
-                  <input
-                    type="radio"
-                    id="payType제각각"
-                    name="payType"
-                    value="제각각"
-                    defaultChecked={this.state.payType === "제각각"}
-                  />
-                  <label htmlFor="payType제각각" className="checkLabel">
-                    제각각
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </form>
+          <FormControl component="fieldset" fullWidth>
+            <FormLabel id="payType" component="legend">
+              어케냄?
+            </FormLabel>
+            <RadioGroup
+              row
+              aria-label="payType"
+              name="payType"
+              value={this.state.payType}
+              onChange={this.onChange}
+            >
+              <FormControlLabel
+                value="N빵"
+                control={<Radio color="primary" />}
+                label="N빵"
+              />
+              <FormControlLabel
+                value="제각각"
+                control={<Radio color="primary" />}
+                label="제각각"
+              />
+            </RadioGroup>
+          </FormControl>
         </div>
       </div>
     );
