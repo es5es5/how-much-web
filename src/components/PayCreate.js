@@ -142,6 +142,7 @@ export class PayCreate extends Component {
                     key={item.id}
                     role={undefined}
                     dense
+                    disableGutters
                     button
                     onClick={() => this.checkEmployee(item.id)}
                   >
@@ -150,7 +151,6 @@ export class PayCreate extends Component {
                       checked={item.checked}
                       tabIndex={-1}
                       color="primary"
-                      onChange={this.onChange}
                       name="payFriends"
                       inputProps={{ "aria-labelledby": labelId }}
                     />
