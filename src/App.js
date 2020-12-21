@@ -1,5 +1,5 @@
 import React from "react";
-import AppRouter from "./Router";
+import AppRouter from "./router";
 
 import "./App.scss";
 import { CssBaseline } from "@material-ui/core";

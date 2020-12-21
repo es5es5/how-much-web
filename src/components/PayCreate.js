@@ -3,13 +3,10 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
-  IconButton,
   Input,
   InputAdornment,
   List,
   ListItem,
-  ListItemIcon,
-  ListItemText,
   MenuItem,
   Radio,
   RadioGroup,
@@ -42,17 +39,13 @@ export class PayCreate extends Component {
   onChange = (event) => {
     const { name, value } = event.target;
 
+
     switch (name) {
-      case "pay":
-        this.setState({ pay: value });
-        break;
-      case "payer":
-        this.setState({ payer: value });
-        break;
-      case "payType":
-        this.setState({ payType: value });
+      case "payFriends":
+        alert('Hi')
         break;
       default:
+        this.setState({ [name]: value })
         break;
     }
   };
@@ -68,6 +61,7 @@ export class PayCreate extends Component {
           : true)
       ),
     });
+    this.setState({ payFriends: this.state.employee.filter(item => item.checked) })
   }
   render() {
     return (
@@ -136,6 +130,9 @@ export class PayCreate extends Component {
 
           {/* 함께한 사람 */}
           <FormControl component="fieldset" fullWidth>
+            <FormLabel id="payType" component="legend">
+              함께한 사람
+            </FormLabel>
             <List>
               {this.state.employee.map((item) => {
                 const labelId = `checkbox-list-label-${item.id}`;
@@ -148,16 +145,16 @@ export class PayCreate extends Component {
                     button
                     onClick={() => this.checkEmployee(item.id)}
                   >
-                    <ListItemIcon>
-                      <Checkbox
-                        edge="start"
-                        checked={item.checked}
-                        tabIndex={-1}
-                        disableRipple
-                        inputProps={{ "aria-labelledby": labelId }}
-                      />
-                    </ListItemIcon>
-                    <ListItemText id={labelId} primary={`${item.name}`} />
+                    <Checkbox
+                      edge="start"
+                      checked={item.checked}
+                      tabIndex={-1}
+                      color="primary"
+                      onChange={this.onChange}
+                      name="payFriends"
+                      inputProps={{ "aria-labelledby": labelId }}
+                    />
+                  <span>{item.name}</span>
                   </ListItem>
                 );
               })}
