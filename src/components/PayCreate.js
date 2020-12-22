@@ -32,6 +32,7 @@ export class PayCreate extends Component {
         return {
           ...item,
           checked: false,
+          pay: ''
         };
       }),
     });
@@ -39,16 +40,15 @@ export class PayCreate extends Component {
   onChange = (event) => {
     const { name, value } = event.target;
 
-
     switch (name) {
-      case "payFriends":
-        alert('Hi')
-        break;
       default:
         this.setState({ [name]: value })
         break;
     }
   };
+  setFriendsPay(employee) {
+
+  }
   checkEmployee(id) {
     this.setState({
       employee: Object.assign(
@@ -130,7 +130,7 @@ export class PayCreate extends Component {
 
           {/* 함께한 사람 */}
           <FormControl component="fieldset" fullWidth>
-            <FormLabel id="payType" component="legend">
+            <FormLabel id="payFriends" component="legend">
               함께한 사람
             </FormLabel>
             <List>
@@ -139,6 +139,7 @@ export class PayCreate extends Component {
 
                 return (
                   <ListItem
+                    className="payFriends-item"
                     key={item.id}
                     role={undefined}
                     dense
@@ -154,7 +155,8 @@ export class PayCreate extends Component {
                       name="payFriends"
                       inputProps={{ "aria-labelledby": labelId }}
                     />
-                  <span>{item.name}</span>
+                    <span>{item.name}</span>
+                  <input type="text" className="payInput" name="payFriendsPay" value={item.pay} onChange={() => this.setFriendsPay(item)}/>
                   </ListItem>
                 );
               })}
